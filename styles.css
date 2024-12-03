@@ -1,0 +1,262 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9; /* Couleur de fond douce */
+    line-height: 1.6;
+}
+
+h1 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    text-align: center;
+    color: #f1eeee;
+    transition: color 0.3s ease;
+}
+h2 {
+    font-size: 1.5rem;
+    margin: -80px 0; /* Réduit l'espace autour du titre */
+    text-align: center;
+    color: #f1eeee;
+    transition: color 0.3s ease;
+}
+
+
+h1:hover {
+    color: #ff5722; /* Changement de couleur au survol */
+}
+
+h2:hover {
+    color: #ff5722; /* Changement de couleur au survol */
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.map-section {
+    display: flex;
+    justify-content: flex-start;
+    width: 80%;
+    height: 600px;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+
+#map, #chart, #map2 {
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Ombre douce */
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease; /* Ajout de transitions pour des animations fluides */
+}
+
+#map:hover, #chart:hover, #map2:hover {
+    transform: scale(1.03); /* Effet de zoom léger au survol */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Ombre plus marquée */
+}
+
+#map {
+    width: 50%;
+    height: 70%;
+    border: 2px solid #ccc;
+    background-color: white;
+}
+
+#chart {
+    width: 50%;
+    height: 70%;
+    margin-left: 2%;
+    border: 2px solid #ccc;
+    background-color: white;
+}
+
+#map2 {
+    width: 50%;
+    height: 400px;
+    margin-top: 100px;
+    border: 2px solid #ccc;
+    background-color: white;
+}
+
+#chart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.legend {
+    background-color: rgba(255, 255, 255, 0.9); /* Fond légèrement transparent */
+    border: 1px solid #ccc;
+    padding: 12px;
+    font-size: 13px;
+    position: absolute;
+    bottom: 1px;
+    left: 1px;
+    z-index: 1000;
+    width: 160px;
+    border-radius: 10px; /* Coins arrondis pour la légende */
+    box-shadow: 0 2px 8px rgb(255, 255, 255); /* Ombre douce */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.legend:hover {
+    transform: scale(1.05); /* Effet de zoom sur la légende au survol */
+    opacity: 0.9;
+}
+
+.legend div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 6px;
+}
+
+.legend .color-box {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.legend .label {
+    font-size: 13px;
+    color: #333; /* Contraste amélioré */
+}
+
+.legend-title {
+    font-weight: bold;
+    margin-bottom: 12px;
+    font-size: 15px;
+    color: #ff5722; /* Couleur orange pour attirer l'attention */
+}
+
+.legend .circle {
+    width: 30px;
+    height: 20px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.echart-container {
+    width: 100%;
+    height: 100%;
+}
+
+button {
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    margin: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #e64a19; /* Couleur plus foncée au survol */
+    transform: scale(1.05); /* Effet de zoom au survol */
+}
+
+@media (max-width: 768px) {
+    .map-section {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #map, #chart, #map2 {
+        width: 100%;
+    }
+}
+/* Fond sombre avec image de fissures pour l'aspect séisme */
+body {
+    background-color: #3f2121; /* Fond sombre pour une ambiance dramatique */
+    background-image: url('https://your-image-url.com/crack-pattern.png'); /* Remplacer par une image de fissures */
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+/* Container avec fond sombre et dégradé */
+#container {
+    background: linear-gradient(135deg, #3f2121, #492727); /* Dégradé pour renforcer le thème séisme */
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+}
+
+/* Titres avec couleurs rouges et ombre pour l'effet séisme */
+h1 {
+    color: #ff5733; /* Rouge intense pour rappeler l'urgence du séisme */
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.6); /* Ombre pour un effet dramatique */
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+h2 {
+    color: #ff5733; /* Rouge intense pour rappeler l'urgence du séisme */
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.6); /* Ombre pour un effet dramatique */
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* Style de carte avec bordure rouge et ombre pour l'aspect séisme */
+#map, #map2 {
+    background-color: #444; /* Fond sombre */
+    border: 2px solid #ff5733; /* Bordure rouge pour rappeler l'urgence */
+    box-shadow: 0 4px 15px rgba(255, 87, 51, 0.6); /* Ombre subtile mais efficace */
+}
+
+/* Style du graphique (chart) avec un fond sombre et bordure rouge */
+#chart {
+    background-color: #efebeb; /* Fond plus sombre pour le graphique */
+    border: 2px solid #ff5733; /* Bordure rouge pour homogénéiser le thème */
+    box-shadow: 0 4px 15px rgba(255, 87, 51, 0.6); /* Ombre pour un léger effet de profondeur */
+}
+
+/* Légende avec fond sombre et texte rouge pour renforcer l'effet de séisme */
+.legend {
+    background-color: rgba(243, 240, 240, 0.9); /* Fond sombre */
+    border: 1px solid #ff5733; /* Bordure rouge */
+    color: #ff5733; /* Texte rouge pour correspondre au thème */
+    font-size: 12px;
+    position: absolute;
+    bottom: 1px;
+    left: 1px;
+    z-index: 1000;
+    width: 160px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6); /* Ombre discrète pour la légende */
+}
+
+
+
+/* Style des boutons */
+button {
+    border: 2px solid #ff5733; /* Bordure rouge */
+    background-color: transparent;
+    color: #ff5733; /* Texte rouge */
+    padding: 12px 25px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Effet de survol sur les boutons */
+button:hover {
+    background-color: #ff5733; /* Changement de couleur au survol */
+    color: white;
+}
+
+
